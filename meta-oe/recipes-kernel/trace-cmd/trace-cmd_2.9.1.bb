@@ -14,4 +14,15 @@ do_install() {
        oe_runmake etcdir=${sysconfdir} DESTDIR=${D} install
 }
 
-FILES_${PN} += "${libdir}/traceevent/plugins"
+# ${libdir}/traceevent/plugins clashes with package perf
+# except for plugin_blk.so it seems
+# so we put it in it's own package
+
+# FILES_${PN}-plugins = "${libdir}/traceevent/plugins"
+
+FILES_${PN} += "${libdir}/traceevent/plugins/plugin_blk.so"
+
+PACKAGES =+ "${PN}-trcevplug"
+FILES_${PN}-trcevplug += " \
+     ${libdir}/traceevent/plugins \
+"
