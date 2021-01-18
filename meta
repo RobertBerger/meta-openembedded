@@ -1,7 +1,6 @@
 Version: 1
-Previous: e88ee06c3f8ab80aa8e26a71a97a7d3106ba0d8a
+Previous: 7c30b85a1ef1e07c5a805f0941097366f722e750
 Head: 985c4f5ba3282875eb91d40023b22d316b9ea4d7
 Applied:
-  0001-resolved-collision-between-perf-and-trace-cmd.patch: 985c4f5ba3282875eb91d40023b22d316b9ea4d7
 Unapplied:
 Hidden:
