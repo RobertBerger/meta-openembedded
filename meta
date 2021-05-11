@@ -1,6 +1,7 @@
 Version: 1
-Previous: None
-Head: 3c259f977e8647ac9c54097d0faab70719a5553e
+Previous: 943fdfc2974cf7a2963828b0ff6e3efd473006f7
+Head: 7b2bdf5e62377b66463b9059c35cda498792ec60
 Applied:
+  0001-does-not-build-mysql-10.5.9-10.5.10.patch: 7b2bdf5e62377b66463b9059c35cda498792ec60
 Unapplied:
 Hidden:
