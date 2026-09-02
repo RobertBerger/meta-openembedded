@@ -64,15 +64,18 @@ do_compile() {
     oe_runmake -C src all
 }
 
+# ADD THIS LINE FOR BLACKSAIL: This replaces the broken host chown from do_install
+DIRFILES_EXTRA_PERMS = "/var/lib/redis:redis:redis:0755"
+
 do_install() {
     export PREFIX=${D}/${prefix}
-    oe_runmake install
+    oe_runmake install PREFIX=${D}/${prefix}
     install -d ${D}/${sysconfdir}/redis
     install -m 0644 ${UNPACKDIR}/redis.conf ${D}/${sysconfdir}/redis/redis.conf
     install -d ${D}/${sysconfdir}/init.d
     install -m 0755 ${UNPACKDIR}/init-redis-server ${D}/${sysconfdir}/init.d/redis-server
     install -d ${D}/var/lib/redis/
-    chown redis.redis ${D}/var/lib/redis/
+    #chown redis.redis ${D}/var/lib/redis/
 
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${UNPACKDIR}/redis.service ${D}${systemd_system_unitdir}
