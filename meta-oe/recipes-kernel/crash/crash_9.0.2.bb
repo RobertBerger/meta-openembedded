@@ -1,4 +1,4 @@
-require crash.inc
+require crash_9.0.2.inc
 
 BBCLASSEXTEND = "native cross"
 

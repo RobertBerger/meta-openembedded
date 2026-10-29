@@ -4,7 +4,7 @@ SUMMARY = "crash utility (cross-canadian crash for ${TARGET_ARCH} target)"
 PN = "crash-cross-canadian-${TRANSLATED_TARGET_ARCH}"
 BPN = "crash"
 
-require crash.inc
+require crash_9.0.2.inc
 
 # cross-canadian.bbclass does not remap DEPENDS to their nativesdk variants, so
 # override (rather than append to) the target DEPENDS pulled in from crash.inc.

@@ -12,7 +12,7 @@ SRCREV = "61fe107ff96a22e7df0029877529b7ce6da36850"
 SRC_URI = "git://github.com/crash-utility/crash;protocol=https;branch=master;subpath=memory_driver;destsuffix=${BP} \
            file://0001-hacked-Makefile-for-module.bbclass.patch;striplevel=2 \
            "
-PV = "9.0.2+git"
+#PV = "9.0.2+git"
 
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
